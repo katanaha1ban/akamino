@@ -1,0 +1,133 @@
+/* 地図のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #d8c197;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#container p{
+  font-size: 24px;
+  color: black;
+}
+
+#map {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: #ffdbac; /* ピーチ色の背景色 */
+  border: 5px solid #ffa64d; /* オレンジ色の境界線 */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 宝のアイコンと地図のスタイル */
+.treasure,
+.map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: bounce 2s infinite;
+}
+
+.treasure {
+  width: 50px;
+  height: 50px;
+  animation: spin 4s linear infinite;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  margin-bottom: 40px;
+}
+
+.treasure1 {
+  top: 14%; /* 適切な座標を指定 */
+  left: 54%; /* 適切な座標を指定 */
+}
+
+.treasure2 {
+  top: 85%; /* 適切な座標を指定 */
+  left: 45%; /* 適切な座標を指定 */
+}
+
+.treasure3 {
+  top: 65%; /* 適切な座標を指定 */
+  left: 12%; /* 適切な座標を指定 */
+}
+.treasure4 {
+  top: 32%; /* 適切な座標を指定 */
+  left: 74%; /* 適切な座標を指定 */
+}
+
+/* ボタンコンテナのスタイル */
+.button-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* トランジションボタンの新しいスタイル */
+.transition-button {
+  background-color: #f88007;
+  color: white;
+  border: none;
+  padding: 20px 40px; /* サイズを変更 */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 影のトランジションを追加 */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.549); /* 影を追加 */
+}
+
+.transition-button:hover {
+  background-color: #f88007;
+}
+
+.transition-button.clicked {
+  background-color:#f88007;
+  transform: scale(0.95);
+  box-shadow: none; /* 押下時に影を消す */
+}
+
+/* アニメーション */
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.98);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+      height: auto;
+  }
+}
