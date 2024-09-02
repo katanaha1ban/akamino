@@ -27,6 +27,12 @@ body {
   font-style: bold;
 }
 
+.mamo {
+  margin-top: 200px;
+  width: 300px;
+  height: 300x;
+}
+
 h1 {
   font-size: 36px;
   font-family: sans-serif;

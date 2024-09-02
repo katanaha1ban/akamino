@@ -68,6 +68,8 @@ body {
   font-weight: bold;
 }
 
+
+
 h1 {
   color: #923ce8;
   font-size: 48px;
@@ -113,6 +115,10 @@ header h1 {
 footer h1 {
   font-size: 24px;
   color: white;
+}
+
+#central {
+  text-align: center;
 }
 
 

@@ -25,6 +25,7 @@ table {
 }
 
 th, td {
+  font-size: 20px;
   border: 1px solid #ccc;
   padding: 10px;
 }
